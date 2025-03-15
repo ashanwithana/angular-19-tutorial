@@ -5,10 +5,11 @@ import { ControlFlowComponent } from "./components/control-flow/control-flow.com
 import { SwtchCaseComponent } from "./components/swtch-case/swtch-case.component";
 import { LoopComponent } from "./components/loop/loop.component";
 import { EventsComponent } from "./components/events/events.component";
+import { SignalComponent } from "./components/signal/signal.component";
 
 @Component({
   selector: 'app-root',
-  imports: [CounterComponent, FormComponent, ControlFlowComponent, SwtchCaseComponent, LoopComponent, EventsComponent],
+  imports: [CounterComponent, FormComponent, ControlFlowComponent, SwtchCaseComponent, LoopComponent, EventsComponent, SignalComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

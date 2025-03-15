@@ -1,0 +1,25 @@
+<h1>Signal</h1>
+
+<h2>{{data}}</h2>
+
+<div>
+    <h2>{{data}}</h2>
+    <div>
+        <button (click)="incrementOnClickProperty('add')">increment</button>
+        <button (click)="incrementOnClickProperty('minus')">decrement</button>
+    </div>
+</div>
+
+<div>
+    <h2>{{counter()}}</h2>
+    <div>
+        <button (click)="incrementOnClickSignal('add')">increment</button>
+        <button (click)="incrementOnClickSignal('minus')">decrement</button>
+    </div>
+</div>
+<hr>
+<h2>{{test()}}</h2>
+
+<button (click)="setData()">Set Data</button>
+
+<h2>{{computed()}}</h2>
