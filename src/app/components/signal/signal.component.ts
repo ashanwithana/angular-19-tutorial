@@ -40,4 +40,20 @@ export class SignalComponent {
     // this.test.set(80)
     this.test.set('test')
   }
+
+  x = signal(30);
+  y = signal(50);
+
+  z = computed(()=>this.x()+this.y())
+
+  updateValue(){
+    console.log(this.z());
+    this.x.set(100);
+    console.log(this.z());
+  }
+
+  updateXValue(){
+    this.x.set(1000);
+    console.log(this.z());
+  }
 }
