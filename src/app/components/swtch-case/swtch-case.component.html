@@ -1,0 +1,26 @@
+<h1>Switch Case | Controlled Statement</h1>
+<button (click)="onhandle('red')">red</button>
+<button (click)="onhandle('yellow')">yellow</button>
+<button (click)="onhandle('blue')">blue</button>
+<button (click)="onhandle('green')">green</button>
+<button (click)="onhandle('none')">Null</button>
+
+<input type="text" placeholder="add color" (input)="changeColor($event)" >
+
+@switch (color) {
+    @case ('red') {
+        <h1 style="background-color: red;">Red Color</h1>
+    }
+    @case('yellow'){
+        <h1 style="background-color: yellow;">Yellow Color</h1>
+    }
+    @case('blue'){
+        <h1 style="background-color: blue;">Blue Color</h1>
+    }
+    @case('green'){
+        <h1 style="background-color: green;">Green Color</h1>
+    }
+    @default{
+        <h1 style="background-color: gray;">No match</h1>
+    }
+}
