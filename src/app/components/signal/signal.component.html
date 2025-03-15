@@ -28,3 +28,13 @@
 
 <button (click)="updateValue()">Update Value</button>
 <button (click)="updateXValue()">Update X Value</button>
+
+<hr>
+
+<h1>{{num()}}</h1>
+<button (click)="num.set(num()+1)">increment</button><button (click)="num.set(num()-1)">decrement</button>
+
+
+@if(displayHeading){
+    <h1 style="background-color: aqua;">This is the hidden content</h1>
+}
