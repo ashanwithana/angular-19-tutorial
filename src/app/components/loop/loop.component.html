@@ -1,0 +1,15 @@
+<h1>For loops</h1>
+<ul>
+  @for (item of names; track $index) {
+  <li>{{ item }}</li>
+  }
+</ul>
+
+<hr>
+
+@for (item of students; track item.name) {
+    <h2>{{item.name}}
+        <span>{{item.age}}</span>
+        <span>{{item.email}}</span>
+    </h2>
+}
