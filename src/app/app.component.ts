@@ -7,10 +7,11 @@ import { LoopComponent } from "./components/loop/loop.component";
 import { EventsComponent } from "./components/events/events.component";
 import { SignalComponent } from "./components/signal/signal.component";
 import { TwoWayBindingComponent } from "./components/two-way-binding/two-way-binding.component";
+import { ToDoListComponent } from "./components/to-do-list/to-do-list.component";
 
 @Component({
   selector: 'app-root',
-  imports: [CounterComponent, FormComponent, ControlFlowComponent, SwtchCaseComponent, LoopComponent, EventsComponent, SignalComponent, TwoWayBindingComponent],
+  imports: [CounterComponent, FormComponent, ControlFlowComponent, SwtchCaseComponent, LoopComponent, EventsComponent, SignalComponent, TwoWayBindingComponent, ToDoListComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
