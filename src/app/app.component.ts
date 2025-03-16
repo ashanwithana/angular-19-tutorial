@@ -6,10 +6,11 @@ import { SwtchCaseComponent } from "./components/swtch-case/swtch-case.component
 import { LoopComponent } from "./components/loop/loop.component";
 import { EventsComponent } from "./components/events/events.component";
 import { SignalComponent } from "./components/signal/signal.component";
+import { TwoWayBindingComponent } from "./components/two-way-binding/two-way-binding.component";
 
 @Component({
   selector: 'app-root',
-  imports: [CounterComponent, FormComponent, ControlFlowComponent, SwtchCaseComponent, LoopComponent, EventsComponent, SignalComponent],
+  imports: [CounterComponent, FormComponent, ControlFlowComponent, SwtchCaseComponent, LoopComponent, EventsComponent, SignalComponent, TwoWayBindingComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
