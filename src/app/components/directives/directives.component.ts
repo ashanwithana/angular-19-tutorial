@@ -1,9 +1,16 @@
-import { NgFor, NgIf, NgSwitch, NgSwitchCase, NgSwitchDefault } from '@angular/common';
+import {
+  NgFor,
+  NgIf,
+  NgSwitch,
+  NgSwitchCase,
+  NgSwitchDefault,
+} from '@angular/common';
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-directives',
-  imports: [NgIf, NgFor, NgSwitch, NgSwitchCase, NgSwitchDefault],
+  imports: [NgIf, NgFor, NgSwitch, NgSwitchCase, NgSwitchDefault, RouterLink],
   templateUrl: './directives.component.html',
   styleUrl: './directives.component.css',
 })
@@ -17,10 +24,10 @@ export class DirectivesComponent {
   students = ['ashan', 'bishan', 'teshan', 'kushan', 'oshan'];
 
   teachers: any = [
-    { name: 'ashan', age: 26, email: 'ashan@test.com' },
-    { name: 'bishan', age: 26, email: 'bishan@test.com' },
-    { name: 'tishan', age: 26, email: 'tishan@test.com' },
-    { name: 'kishan', age: 26, email: 'kishan@test.com' },
+    { name: 'ashan', id: 1, age: 26, email: 'ashan@test.com' },
+    { name: 'bishan', id: 2, age: 26, email: 'bishan@test.com' },
+    { name: 'tishan', id: 3, age: 26, email: 'tishan@test.com' },
+    { name: 'kishan', id: 4, age: 26, email: 'kishan@test.com' },
   ];
 
   login = false;

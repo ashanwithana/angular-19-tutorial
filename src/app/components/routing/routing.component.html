@@ -1,0 +1,7 @@
+<ul>
+  @for (x of teachers; track $index) {
+  <li>
+    <a routerLink="user/{{ x.id }}/{{x.name}}">{{ x.name }}</a>
+  </li>
+  }
+</ul>

@@ -6,37 +6,43 @@
 
 <p>login logout</p>
 
-<button (click)="loginToggle()" *ngIf="login;else elseBlock">
-    Logout
-</button>
+<button (click)="loginToggle()" *ngIf="login; else elseBlock">Logout</button>
 <ng-template #elseBlock>
-    <button (click)="loginToggle()">Login</button>
+  <button (click)="loginToggle()">Login</button>
 </ng-template>
-
 
 <h1>NgFor</h1>
 <p>students</p>
 <ul>
-    <li *ngFor="let x of students">
-        {{ x }}
-    </li>
+  <li *ngFor="let x of students">
+    {{ x }}
+  </li>
 </ul>
 <p>teachers</p>
 <ul>
-    <li *ngFor="let y of teachers">
-        <span>{{ y.name }}</span><br/>
-        <span>{{ y.age }}</span><br/>
-        <span>{{ y.email }}</span>
-    </li>
+  <li *ngFor="let y of teachers">
+    <span>{{ y.name }}</span
+    ><br />
+    <span>{{ y.age }}</span
+    ><br />
+    <span>{{ y.email }}</span>
+  </li>
 </ul>
 
 <h1>NgSwitch</h1>
 <div [ngSwitch]="color">
-    <h1 style="background-color: red;" *ngSwitchCase="'red'">Red</h1>
-    <h1 style="background-color: blue;" *ngSwitchCase="'blue'">Blue</h1>
-    <h1 style="background-color: yellow;" *ngSwitchCase="'yellow'">Yellow</h1>
-    <h1 style="background-color: pink;" *ngSwitchCase="'pink'">Pink</h1>
-    <h1 style="background-color: purple;" *ngSwitchCase="'purple'">Purple</h1>
-    <h1 style="background-color: gay;" *ngSwitchDefault>No match</h1>
-
+  <h1 style="background-color: red" *ngSwitchCase="'red'">Red</h1>
+  <h1 style="background-color: blue" *ngSwitchCase="'blue'">Blue</h1>
+  <h1 style="background-color: yellow" *ngSwitchCase="'yellow'">Yellow</h1>
+  <h1 style="background-color: pink" *ngSwitchCase="'pink'">Pink</h1>
+  <h1 style="background-color: purple" *ngSwitchCase="'purple'">Purple</h1>
+  <h1 style="background-color: gay" *ngSwitchDefault>No match</h1>
 </div>
+
+<ul>
+  @for (x of teachers; track $index) {
+  <li>
+    <a routerLink="user/{{ x.id }}/{{x.name}}">{{ x.name }}</a>
+  </li>
+  }
+</ul>
