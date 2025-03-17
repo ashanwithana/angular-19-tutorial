@@ -5,3 +5,17 @@
   </li>
   }
 </ul>
+
+<a routerLink="user">Go to User page</a>
+
+<hr>
+
+<a [routerLink]="['user',{name:'ashan withana'}]">Go to User page</a>
+
+<hr>
+
+<button (click)="goUser()">go to user page from button</button>
+
+<hr>
+
+<a routerLink="user">Go to profile from route</a>

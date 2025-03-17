@@ -10,7 +10,8 @@ export const routes: Routes = [
     {path:'forms', component:FormComponent},
     {path:'directives', component:DirectivesComponent},
     {path:'counter', component:CounterComponent},
-    {path:'user/:id/:name', component:EventsComponent},
+    // {path:'user', component:EventsComponent},
+    {path:'user', component:EventsComponent,data:{name:'ashan'}},
     {path:'', component:RoutingComponent},
     {path:'**', component:PageNotFoundComponent}
 ];
