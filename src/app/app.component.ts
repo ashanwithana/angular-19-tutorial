@@ -8,10 +8,11 @@ import { EventsComponent } from "./components/events/events.component";
 import { SignalComponent } from "./components/signal/signal.component";
 import { TwoWayBindingComponent } from "./components/two-way-binding/two-way-binding.component";
 import { ToDoListComponent } from "./components/to-do-list/to-do-list.component";
+import { DynamicStyleComponent } from "./components/dynamic-style/dynamic-style.component";
 
 @Component({
   selector: 'app-root',
-  imports: [CounterComponent, FormComponent, ControlFlowComponent, SwtchCaseComponent, LoopComponent, EventsComponent, SignalComponent, TwoWayBindingComponent, ToDoListComponent],
+  imports: [CounterComponent, FormComponent, ControlFlowComponent, SwtchCaseComponent, LoopComponent, EventsComponent, SignalComponent, TwoWayBindingComponent, ToDoListComponent, DynamicStyleComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

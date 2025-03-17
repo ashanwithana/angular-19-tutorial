@@ -1,0 +1,5 @@
+<h1>Dynamic Styles</h1>
+
+<!-- <h2 [style.color]="color" [style.fontSize]="font">Heading tag</h2> -->
+<h2 [style.color]="color" [style.fontSize]="zoom ? font : fontbig">Heading tag</h2>
+<button (click)="zoomToggle()">Toggle</button>
