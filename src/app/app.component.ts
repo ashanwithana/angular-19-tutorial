@@ -9,10 +9,11 @@ import { SignalComponent } from "./components/signal/signal.component";
 import { TwoWayBindingComponent } from "./components/two-way-binding/two-way-binding.component";
 import { ToDoListComponent } from "./components/to-do-list/to-do-list.component";
 import { DynamicStyleComponent } from "./components/dynamic-style/dynamic-style.component";
+import { DirectivesComponent } from "./components/directives/directives.component";
 
 @Component({
   selector: 'app-root',
-  imports: [CounterComponent, FormComponent, ControlFlowComponent, SwtchCaseComponent, LoopComponent, EventsComponent, SignalComponent, TwoWayBindingComponent, ToDoListComponent, DynamicStyleComponent],
+  imports: [CounterComponent, FormComponent, ControlFlowComponent, SwtchCaseComponent, LoopComponent, EventsComponent, SignalComponent, TwoWayBindingComponent, ToDoListComponent, DynamicStyleComponent, DirectivesComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

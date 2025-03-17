@@ -1,0 +1,42 @@
+<p>Directives</p>
+<h1>NgIf</h1>
+
+<h1 *ngIf="show">Hi this is a directive</h1>
+<button (click)="whenToggle()">Toggle</button>
+
+<p>login logout</p>
+
+<button (click)="loginToggle()" *ngIf="login;else elseBlock">
+    Logout
+</button>
+<ng-template #elseBlock>
+    <button (click)="loginToggle()">Login</button>
+</ng-template>
+
+
+<h1>NgFor</h1>
+<p>students</p>
+<ul>
+    <li *ngFor="let x of students">
+        {{ x }}
+    </li>
+</ul>
+<p>teachers</p>
+<ul>
+    <li *ngFor="let y of teachers">
+        <span>{{ y.name }}</span><br/>
+        <span>{{ y.age }}</span><br/>
+        <span>{{ y.email }}</span>
+    </li>
+</ul>
+
+<h1>NgSwitch</h1>
+<div [ngSwitch]="color">
+    <h1 style="background-color: red;" *ngSwitchCase="'red'">Red</h1>
+    <h1 style="background-color: blue;" *ngSwitchCase="'blue'">Blue</h1>
+    <h1 style="background-color: yellow;" *ngSwitchCase="'yellow'">Yellow</h1>
+    <h1 style="background-color: pink;" *ngSwitchCase="'pink'">Pink</h1>
+    <h1 style="background-color: purple;" *ngSwitchCase="'purple'">Purple</h1>
+    <h1 style="background-color: gay;" *ngSwitchDefault>No match</h1>
+
+</div>
