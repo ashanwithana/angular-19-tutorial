@@ -1,10 +1,11 @@
 import { Component, Input } from '@angular/core';
 import { Router, RouterLink, RouterOutlet } from '@angular/router';
 import { UserComponent } from "../user/user.component";
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-routing',
-  imports: [RouterLink, UserComponent],
+  imports: [RouterLink, UserComponent, CommonModule],
   templateUrl: './routing.component.html',
   styleUrl: './routing.component.css',
 })
@@ -23,5 +24,5 @@ export class RoutingComponent {
   }
 
   users = ['ashan','nishan','tishan','kishan'];
-
+num:number=20;
 }
