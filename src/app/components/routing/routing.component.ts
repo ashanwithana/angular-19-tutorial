@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Router, RouterLink, RouterOutlet } from '@angular/router';
+import { UserComponent } from "../user/user.component";
 
 @Component({
   selector: 'app-routing',
-  imports: [RouterLink],
+  imports: [RouterLink, UserComponent],
   templateUrl: './routing.component.html',
   styleUrl: './routing.component.css',
 })
@@ -20,4 +21,7 @@ export class RoutingComponent {
   goUser() {
     this.router.navigate(['user'], { queryParams: { name: 'ashan' } });
   }
+
+  users = ['ashan','nishan','tishan','kishan'];
+
 }

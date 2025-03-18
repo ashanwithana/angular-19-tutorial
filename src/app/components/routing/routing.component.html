@@ -19,3 +19,13 @@
 <hr>
 
 <a routerLink="user">Go to profile from route</a>
+
+
+<h1>Reuse Component</h1>
+  @for (user of users; track user) {
+    <div>
+      <app-user [user]="user"></app-user>
+       <!-- {{user}} -->
+    </div>
+  }
+

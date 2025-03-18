@@ -7,11 +7,11 @@ import { EventsComponent } from './components/events/events.component';
 import { RoutingComponent } from './components/routing/routing.component';
 
 export const routes: Routes = [
-    {path:'forms', component:FormComponent},
-    {path:'directives', component:DirectivesComponent},
-    {path:'counter', component:CounterComponent},
-    // {path:'user', component:EventsComponent},
-    {path:'user', component:EventsComponent,data:{name:'ashan'}},
-    {path:'', component:RoutingComponent},
-    {path:'**', component:PageNotFoundComponent}
+    // {path:'forms', component:FormComponent},
+    // {path:'directives', component:DirectivesComponent},
+    // {path:'counter', component:CounterComponent},
+    // // {path:'user', component:EventsComponent},
+    // {path:'user', component:EventsComponent,data:{name:'ashan'}},
+    // {path:'', component:RoutingComponent},
+    // {path:'**', component:PageNotFoundComponent}
 ];
