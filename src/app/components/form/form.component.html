@@ -6,9 +6,9 @@
 
 <h1>Reactive Forms</h1>
 
-<input type="text" [formControl]="name" placeholder="enter name" /><br /><br />
+<!-- <input type="text" [formControl]="name" placeholder="enter name" /><br /><br />
 <input type="text" [formControl]="password" placeholder="enter password" /><br /><br />
-<input type="text" [formControl]="email" placeholder="enter email" /><br /><br />
+<input type="text" [formControl]="email" placeholder="enter email" /><br /><br /> -->
 
 <button (click)="getValue()">Get Info</button>
 <button (click)="setValue()">Set Info</button>
@@ -39,3 +39,27 @@
 <!-- <h2>{{ detailsForm.value.fname }}</h2>
 <h2>{{ detailsForm.value.fpassword }}</h2>
 <h2>{{ detailsForm.value.femail }}</h2> -->
+
+<h1>Template Driven Forms</h1>
+
+<form #userForm="ngForm" (ngSubmit)="addUser(userForm.value)">
+    <input type="text" required #name="ngModel" placeholder="enter the name" name="name" ngModel/>
+    <span *ngIf="name.invalid && name.touched">Name is Required</span>
+    <br /><br />
+    <input type="password" #password="ngModel" required minlength="5" maxlength="10" placeholder="enter the password" name="password" ngModel/>
+    <span *ngIf="password.invalid && password.touched">Password is required, min :5 max:10 characters allowed</span>
+    <br /><br />
+    <select name="gender" ngModel>
+        <option value="">Select Gender</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+    </select><br /><br />
+    <input type="range" name="range" id="" ngModel><br /><br />
+    <button [disabled]="userForm.invalid">Add User</button>
+</form>
+
+
+<h2>{{userData.name}}</h2>
+<h2>{{userData.password}}</h2>
+<h2>{{userData.gender}}</h2>
+<h2>{{userData.range}}</h2>
