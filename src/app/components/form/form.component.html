@@ -1,5 +1,41 @@
 <h1>Get and Set Input Field Value</h1>
-<h3>{{userName}}</h3>
-<input value="{{userName}}" (input)="getUserName($event)" type="text" name="" id="" placeholder="enter user name">
-<br>
+<h3>{{ userName }}</h3>
+<input value="{{ userName }}" (input)="getUserName($event)" type="text" name="" id="" placeholder="enter user name" />
+<br />
 <button (click)="setUserName()">Set User Name</button>
+
+<h1>Reactive Forms</h1>
+
+<input type="text" [formControl]="name" placeholder="enter name" /><br /><br />
+<input type="text" [formControl]="password" placeholder="enter password" /><br /><br />
+<input type="text" [formControl]="email" placeholder="enter email" /><br /><br />
+
+<button (click)="getValue()">Get Info</button>
+<button (click)="setValue()">Set Info</button>
+
+<h2>{{ name.value }}</h2>
+<h2>{{ password.value }}</h2>
+<h2>{{ email.value }}</h2>
+
+<h1>Reactive Form Group</h1>
+
+<form [formGroup]="detailsForm" (ngSubmit)="submitData()">
+    <input type="text" formControlName="fname" placeholder="enter name" />
+    <span *ngIf="fname?.hasError('required')">This is a Required Field</span>
+    <span *ngIf="fname?.invalid && (fname?.dirty || fname?.touched)">Please Enter a Valid Name</span>
+    <br /><br />
+    <input type="text" formControlName="fpassword" placeholder="enter password" />
+    <span *ngIf="fpassword?.hasError('required')">This is a Required Field</span>
+    <span *ngIf="fpassword?.invalid && (fpassword?.dirty || fpassword?.touched)">Please Enter a Valid Password</span>
+    <br /><br />
+    <input type="text" formControlName="femail" placeholder="enter email" />
+    <span *ngIf="femail?.hasError('required')">This is a Required Field</span>
+    <span *ngIf="femail?.invalid && (femail?.dirty || femail?.touched)">Please Enter a Valid Email</span>
+    <br /><br />
+
+    <button>Submit</button>
+</form>
+
+<!-- <h2>{{ detailsForm.value.fname }}</h2>
+<h2>{{ detailsForm.value.fpassword }}</h2>
+<h2>{{ detailsForm.value.femail }}</h2> -->
